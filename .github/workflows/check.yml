@@ -1,0 +1,54 @@
+# Checks every pull request to the store: each version that is new in index.json is downloaded from its release,
+# its sha256 compared, its zip unpacked and its layr.json validated (`layr store check`). Versions already listed may
+# never change or disappear (yank them instead).
+#
+# The workflow needs the `layr` command. Set ONE repository variable (Settings > Secrets and variables > Actions >
+# Variables):
+#   LAYR_BIN_URL  a prebuilt Linux x86_64 `layr` binary to download (fastest), or
+#   LAYR_REPO     the layr repository's git URL, to build `layr` from (default below; a few minutes, cached).
+name: Check the store
+
+on:
+  pull_request:
+    paths: ["index.json"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      LAYR_REPO: ${{ vars.LAYR_REPO || 'https://github.com/mrknrb/layr_flutter' }}
+      LAYR_BIN_URL: ${{ vars.LAYR_BIN_URL }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: The index before this pull request
+        run: |
+          base="${{ github.base_ref || 'main' }}"
+          git show "origin/$base:index.json" > "$RUNNER_TEMP/base.json" 2>/dev/null || echo '{"v":1,"packages":{}}' > "$RUNNER_TEMP/base.json"
+
+      - name: Cache the layr build
+        if: env.LAYR_BIN_URL == ''
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo
+          key: layr-cli-${{ runner.os }}-${{ env.LAYR_REPO }}
+
+      - name: Get layr
+        run: |
+          mkdir -p "$HOME/.local/bin"
+          if [ -n "$LAYR_BIN_URL" ]; then
+            curl -fsSL "$LAYR_BIN_URL" -o "$HOME/.local/bin/layr"
+            chmod +x "$HOME/.local/bin/layr"
+          else
+            cargo install --git "$LAYR_REPO" --locked layr_cli --root "$HOME/.local"
+          fi
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Check new versions
+        run: layr store check index.json --base "$RUNNER_TEMP/base.json"
