@@ -1,11 +1,11 @@
 {
   "v": 1,
-  "version": "0.1.0",
-  "notes": "First release",
+  "version": "0.2.0",
+  "notes": "Encrypted sync, several stores, choose your sync server",
   "windows": {
-    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.1.0/layr-windows-0.1.0.zip",
-    "sha256": "ae066517890a9e0a708bee04b0f180427ddcc10005c6e6ad491fcf268dbbc3c0",
+    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.2.0/layr-windows-0.2.0.zip",
+    "sha256": "f8aacfaa84ed5875a3962c73b3aa7d5928670a4cfcb88b90cf74ba3915eb6353",
     "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-    "signature": "4L1qWPztnpF0e9Y/F7tSLS1P7w1fgJgHG50rohYCacuHGVuDlRCEQyB0gmMr3w71mb7OrwkXcYy1LMBDkAA/Ag=="
+    "signature": "Eb7Nx4mNjkfJoI/nhm2TTj7jyA+azLRh/Mz7QOEus4i00z9tnEhOyuz0BSgLNJUqnmAnxpF2XsjRlVLwMeI1Dg=="
   }
 }
