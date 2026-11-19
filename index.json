@@ -632,6 +632,97 @@
               "why": "Pacing: the room every Claude account has left (plan-weighted, below its switch points), and when another account has room"
             }
           ]
+        },
+        "0.10.2": {
+          "url": "packages/pipeline-0.10.2.zip",
+          "sha256": "f1da75299af58c3ba91b4cd4d7e2055bb4d9e0d7268e157e897aa40df35e7381",
+          "dependencies": {
+            "claude": ">=0.3"
+          },
+          "permissions": [
+            "data",
+            "pc",
+            "supabase"
+          ],
+          "needs": [
+            "pc",
+            "node",
+            "git"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "cshoirJu2mBs3ZP8TNPiiupOIJ//574TzZXuQwxZ3FSUdWgewCzysKZDl2Bv6uupSmGE/wXqWTXJupMWuOqhDA==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See tasks, the board, branches and settings",
+              "defaults": {
+                "agents": "allow",
+                "plugin:concepts": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "thread",
+              "label": "Show a task in its Claude thread, and message, answer, stop and act on it there",
+              "defaults": {
+                "agents": "allow",
+                "plugin:claude": "allow"
+              }
+            },
+            {
+              "id": "work",
+              "label": "Propose, edit and run tasks",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "manage",
+              "label": "Land, discard, delete tasks; remove worktrees; change modes, settings, views",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "pc",
+              "label": "Open windows on the PC (VS Code, File Explorer, ▶ Try)",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "claude",
+              "version": ">=0.3",
+              "groups": [
+                "read",
+                "conversations",
+                "ask",
+                "run",
+                "approve"
+              ],
+              "required": true,
+              "why": "Runs every task as a Claude thread: starts, reads, steers, answers and archives it, and writes briefs"
+            },
+            {
+              "plugin": "concepts",
+              "groups": [
+                "read",
+                "write"
+              ],
+              "required": false,
+              "why": "Links tasks to the concept map, moves their nodes' Status, and gives each task its project's map"
+            },
+            {
+              "plugin": "accounts",
+              "groups": [
+                "read"
+              ],
+              "required": false,
+              "why": "Pacing: the room every Claude account has left (plan-weighted, below its switch points), and when another account has room"
+            }
+          ]
         }
       }
     },
