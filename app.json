@@ -1,0 +1,11 @@
+{
+  "v": 1,
+  "version": "0.1.0",
+  "notes": "First release",
+  "windows": {
+    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.1.0/layr-windows-0.1.0.zip",
+    "sha256": "ae066517890a9e0a708bee04b0f180427ddcc10005c6e6ad491fcf268dbbc3c0",
+    "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+    "signature": "4L1qWPztnpF0e9Y/F7tSLS1P7w1fgJgHG50rohYCacuHGVuDlRCEQyB0gmMr3w71mb7OrwkXcYy1LMBDkAA/Ag=="
+  }
+}

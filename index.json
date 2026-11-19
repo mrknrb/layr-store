@@ -1,4 +1,892 @@
 {
   "v": 1,
-  "packages": {}
+  "packages": {
+    "accounts": {
+      "name": "Claude Accounts",
+      "description": "The PC's Claude logins: every account's usage, logging in from the browser, switching by hand or by itself near the limit, and starting idle 5-hour windows.",
+      "icon": "switch_account",
+      "author": "mrknrb",
+      "versions": {
+        "0.1.2": {
+          "url": "packages/accounts-0.1.2.zip",
+          "sha256": "3e71c729c0c5462549e63fe97e4231cf24abc5bd6f471d6583bf27306927d7fe",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "pc"
+          ],
+          "needs": [
+            "pc",
+            "node"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "mDENOZDVN4gCrfkEI63FRX3J3MpJ8A44DFNS0IiHSzHTaMb4ZkE2sUmLDNIP68ix4/Ac5HOS5WpkTybHGQgMCA==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See accounts' usage",
+              "defaults": {
+                "agents": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "switch",
+              "label": "Switch accounts and change settings",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "logins",
+              "label": "Add, import and remove logins",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "claude",
+              "groups": [
+                "read"
+              ],
+              "required": false,
+              "why": "Reads the PC's Claude usage from Claude Code threads; without it, accounts measures the usage itself"
+            }
+          ]
+        }
+      }
+    },
+    "adblock": {
+      "name": "Ad blocker",
+      "description": "Blocks ads and trackers in every web panel with EasyList and EasyPrivacy: on or off, per site, counters.",
+      "icon": "shield",
+      "author": "layr",
+      "versions": {
+        "0.1.1": {
+          "url": "packages/adblock-0.1.1.zip",
+          "sha256": "f5f4aeba095d5fd1cffa0d8e86e0456719a69d607a24d4f5293c01a8ff60dee5",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "adblock"
+          ],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "TAgtUzYQFSoJc/1MSyxS5p9tuBA80NzHQJ50fIdEsgxZSYTe3mq3XrhoOGXNEJYBiq58SMGydtEQH0QEBv2FCw=="
+        }
+      }
+    },
+    "browser": {
+      "name": "Browser",
+      "description": "Web pages in tabs, with a start page for your bookmarks.",
+      "icon": "public",
+      "author": "layr",
+      "versions": {
+        "0.1.1": {
+          "url": "packages/browser-0.1.1.zip",
+          "sha256": "e8095696cbf0ca87c776c29adde71ec168ed6099a1d644b5ae5604791a96bd42",
+          "dependencies": {},
+          "permissions": [
+            "data"
+          ],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "EXUxvBpReq/vE4Pg4FofgRvmdF7jPxfQpzgdKVCD6ntGPnWIh0+88s9eTAAd+oMgLvBv3sasxJO1eBXn2z4FBA=="
+        }
+      }
+    },
+    "builder": {
+      "name": "Builder",
+      "description": "A pack for making things with Claude: your own plugins, and projects planned as tasks and concepts.",
+      "icon": "construction",
+      "author": "layr",
+      "kind": "app",
+      "versions": {
+        "0.2.0": {
+          "url": "packages/builder-0.2.0.zip",
+          "sha256": "83b81bb03a2aec4e70442a2083a801b2dfed458e13b0cbc3bec9dbab317c1d29",
+          "dependencies": {
+            "claude": "^0.3",
+            "concepts": "^0.2",
+            "pipeline": "^0.4"
+          },
+          "permissions": [],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "E0z3xmmrAbjybOoPYhJYapxJ1oPz+RYG6k3zu9DtX2I1z3r7HVXtn5XpzgIYy+pwYenUmwuSche2sEnFa8VmBA==",
+          "sessions": [
+            {
+              "id": "make-plugin",
+              "name": "Make a plugin",
+              "description": "Claude, with a first message ready, makes a small plugin; its page in layr (About this plugin) shows its history and versions.",
+              "icon": "extension"
+            },
+            {
+              "id": "plan",
+              "name": "Plan a project",
+              "description": "The pipeline's task board next to the concept map: plan the ideas, then run them as Claude tasks.",
+              "icon": "account_tree"
+            }
+          ]
+        }
+      }
+    },
+    "care": {
+      "name": "Plugin care",
+      "description": "Part of layr: every plugin's problems (on each plugin's page), a notification when one breaks, going back to the version that worked, fixes with Claude that are proven or undone, and updates that keep your changes.",
+      "icon": "healing",
+      "author": "layr",
+      "versions": {
+        "0.2.1": {
+          "url": "packages/care-0.2.1.zip",
+          "sha256": "6fda08a8f7c3f60d47f79a4ff095b3cc46c295c5364b00d07dd15a85998d4f87",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "packages"
+          ],
+          "needs": [
+            "pc",
+            "node"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "PpEljuFUyYfagcqHH/6BS2tDo+U2A9LRBd8vd6jM/1j9JeoHaUgYrh1K8yYUS9T/tH3kJLVFQaFf/PWDS2uiAg==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See plugins' problems and how Plugin care looks after them",
+              "defaults": {
+                "agents": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "fix",
+              "label": "Fix, undo and update plugins (Claude threads, going back to older versions)",
+              "defaults": {
+                "agents": "ask"
+              }
+            },
+            {
+              "id": "settings",
+              "label": "Change how Plugin care looks after each plugin",
+              "defaults": {
+                "agents": "ask"
+              }
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "claude",
+              "version": ">=0.3.2",
+              "groups": [
+                "read",
+                "run"
+              ],
+              "required": false,
+              "why": "Fix with Claude, Add checks with Claude and updates that keep your changes start Claude threads on your plugins"
+            }
+          ]
+        }
+      }
+    },
+    "claude": {
+      "name": "Claude Code",
+      "description": "Claude Code threads in your projects and worktrees, and on your layr plugins and Chrome extensions, with approvals and live streaming.",
+      "icon": "smart_toy",
+      "author": "mrknrb",
+      "versions": {
+        "0.5.0": {
+          "url": "packages/claude-0.5.0.zip",
+          "sha256": "b257b3d90e59efce28d500246b077ca972fb897a33ec1743b73ff8e1082d93d8",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "pc",
+            "agents",
+            "packages",
+            "events:global"
+          ],
+          "needs": [
+            "pc",
+            "node",
+            "claude-code"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "m2EBQz4zbAhLnlz7/a+nc2IJ61lptfKA5k3FoL26EHSfQrnqUZYqFIke0GsKf5ukUtjz3ve8HHS8ahWqypKWCA==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See projects, threads' status, models and usage",
+              "defaults": {
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "conversations",
+              "label": "Read what threads say",
+              "defaults": {
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "ask",
+              "label": "Ask Claude one-off questions (uses your plan)",
+              "defaults": {
+                "plugin:concepts": "allow",
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "run",
+              "label": "Start, steer and stop threads; change projects",
+              "defaults": {
+                "plugin:care": "allow",
+                "plugin:devtools": "allow",
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "approve",
+              "label": "Answer threads' permission requests and change their permissions",
+              "defaults": {
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "build-times",
+              "label": "See how long the builds, tests and checks threads run take",
+              "defaults": {
+                "agents": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "pc",
+              "label": "Open terminal windows running commands, and folders, on your PC",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "pipeline",
+              "groups": [
+                "thread"
+              ],
+              "required": false,
+              "why": "In a pipeline task's thread: the task's buttons, and your messages and answers go through the pipeline"
+            },
+            {
+              "plugin": "concepts",
+              "groups": [
+                "read"
+              ],
+              "required": false,
+              "why": "Shows the concept nodes a thread touched, and the prototype pages linked in its replies"
+            }
+          ]
+        }
+      }
+    },
+    "concepts": {
+      "name": "Concepts",
+      "description": "Your concept map: nodes in groups, edges, tags, summaries, prototypes and AI proposals, shared with layr_code.",
+      "icon": "hub",
+      "author": "mrknrb",
+      "versions": {
+        "0.3.0": {
+          "url": "packages/concepts-0.3.0.zip",
+          "sha256": "7222fb2690cd11d123d3cf33439289e5efe77aac83860578de66aafa8d595c2d",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "pc",
+            "supabase",
+            "network:https://tirznddjqwrovpvasgpn.supabase.co"
+          ],
+          "needs": [
+            "pc",
+            "node"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "XrCRZnAuzunRXFBrM2xIqDuawWQ+LfttfpN0gtmL915k8zPRw/gm2Xjsdq4lWBqRlY66gKlvIyVhpGd8mi5UAQ==",
+          "access": [
+            {
+              "id": "read",
+              "label": "Read your concept maps",
+              "defaults": {
+                "agents": "allow",
+                "plugin:claude": "allow",
+                "plugin:pipeline": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "write",
+              "label": "Add to and change your concept maps",
+              "defaults": {
+                "agents": "allow",
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "decide",
+              "label": "Accept or decline proposals",
+              "defaults": {
+                "agents": "allow"
+              }
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "claude",
+              "groups": [
+                "read",
+                "ask",
+                "run"
+              ],
+              "required": false,
+              "why": "Titles of linked Claude threads, AI summaries of groups, and Ask in a Claude thread from a node"
+            },
+            {
+              "plugin": "pipeline",
+              "groups": [
+                "read",
+                "work"
+              ],
+              "required": false,
+              "why": "Titles of linked pipeline tasks, Link a task, and Send to pipeline from a node"
+            }
+          ]
+        }
+      }
+    },
+    "devtools": {
+      "name": "My plugins",
+      "description": "My plugins is part of layr now: each plugin's history with undo, versions, updates and sharing on GitHub are on its page in the Plugins list. This plugin only points there and can be uninstalled.",
+      "icon": "history",
+      "author": "layr",
+      "versions": {
+        "0.2.0": {
+          "url": "packages/devtools-0.2.0.zip",
+          "sha256": "108cd5d89ec7b2c2d582861dea3f18f5f3d2ce61762f1ebac9d7b00495d2a2ad",
+          "dependencies": {},
+          "permissions": [],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "Sq9wVwC/h4P4HxGxL8CZM+7TsUGxbOnTb2hkmQvPTpddCm5hBlmW/7jgK7KKq2TvwJDPxP5aM524yyzmUueUDw=="
+        }
+      }
+    },
+    "hello": {
+      "name": "Hello",
+      "description": "The smallest plugin: a button that counts, and remembers. Copy it to start your own.",
+      "icon": "waving_hand",
+      "author": "layr",
+      "versions": {
+        "0.1.0": {
+          "url": "packages/hello-0.1.0.zip",
+          "sha256": "71a4508eb5b52213978f86a7b6ad45c0ba2942f97d136c63ebecb7cd1e87eb64",
+          "dependencies": {},
+          "permissions": [
+            "data"
+          ],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "r0DVX9d57yjFv0aU+hiPqomc0FqNbuvnnBgSu7NW0uJkYgnYHJM9ZjAboHy6YpNEEhQIEPEr13zKL48d0FD+Bg=="
+        }
+      }
+    },
+    "jupyter": {
+      "name": "JupyterLab",
+      "description": "JupyterLab notebooks in a panel, with pandas, matplotlib and scipy ready.",
+      "icon": "data_object",
+      "author": "layr",
+      "versions": {
+        "0.1.1": {
+          "url": "packages/jupyter-0.1.1.zip",
+          "sha256": "e0da32a539c71292b719fa00b73680a1a6c31492fae9f281a5475f1a0cbfbb97",
+          "dependencies": {},
+          "permissions": [
+            "pc"
+          ],
+          "needs": [
+            "pc",
+            "python"
+          ],
+          "layr": "^0.1",
+          "backend": "app",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "zTYshNdMyxj3NSeEXumS9bWjHNaqopfgHGSLT7Bt4jP4QW5LOxvdbdknXwpNZyTFOpTgAHo9w6zKl5xtguQuDA=="
+        }
+      }
+    },
+    "knowledge": {
+      "name": "Knowledge",
+      "description": "A pack for learning things: Claude researches the web into your wiki, and a desk for reading next to it.",
+      "icon": "school",
+      "author": "layr",
+      "kind": "app",
+      "versions": {
+        "0.1.0": {
+          "url": "packages/knowledge-0.1.0.zip",
+          "sha256": "168d9921612805e0f99f8cbfd3af6db4061299bbaf0fe19acd98b3b00eca4f0c",
+          "dependencies": {
+            "browser": "^0.1",
+            "claude": "^0.3",
+            "wiki": ">=0.1.0, <0.3.0"
+          },
+          "permissions": [],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "kdoaCm7kTRxWT6KBlVQMoDa2SKSBayOMbYRnq57l15CFip2t3gOvISKyHO0gjWTCxpDcXefGUPwRl36qccjjBg==",
+          "sessions": [
+            {
+              "id": "research",
+              "name": "Research a topic",
+              "description": "Claude, with a first message ready, researches the web and writes linked wiki pages; the wiki and the web beside it.",
+              "icon": "travel_explore"
+            },
+            {
+              "id": "read",
+              "name": "Read and take notes",
+              "description": "A web page on the left, your wiki on the right to write down what you learn.",
+              "icon": "book"
+            }
+          ]
+        }
+      }
+    },
+    "notes": {
+      "name": "Notes",
+      "description": "Notes in Markdown with a live preview, search and pinned notes.",
+      "icon": "sticky_note_2",
+      "author": "layr",
+      "versions": {
+        "0.1.1": {
+          "url": "packages/notes-0.1.1.zip",
+          "sha256": "927a575e9b7a3e13d6713a1770359db52c1be4b9a831dbf2049c9f728e35aefa",
+          "dependencies": {},
+          "permissions": [
+            "data"
+          ],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "aUwsijgXQC60d/qaP809bkgpXW760SezO+ucRJH3qbwq1VkqDf+GggbMThdg6aOX5shN6bl7KX9BnAIx7e1ABQ=="
+        }
+      }
+    },
+    "office": {
+      "name": "Office",
+      "description": "Word documents, spreadsheets and presentations, edited on the device with ONLYOFFICE (ranuts/document, AGPL-3.0).",
+      "icon": "description",
+      "author": "layr",
+      "versions": {
+        "0.1.0": {
+          "url": "https://github.com/mrknrb/layr-office/releases/download/v0.1.0/office-0.1.0.zip",
+          "sha256": "6ca8e754ab9f643ded1e30ff6c57b023a49b1bd06634b2e7926ced62ae36bdad",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "files",
+            "wasm",
+            "eval"
+          ],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "W+3kTd+t8SdasYiImr2AsMW9s+PSvzy/uP/JJIaf7AJqhUvGit2PDmbGK2dP+s1GFKe7/nW+d3yZvJAxnpVzDQ=="
+        }
+      }
+    },
+    "pdf": {
+      "name": "PDF",
+      "description": "Reads, annotates and saves PDF files with Mozilla's PDF.js.",
+      "icon": "picture_as_pdf",
+      "author": "layr",
+      "versions": {
+        "0.1.0": {
+          "url": "packages/pdf-0.1.0.zip",
+          "sha256": "59962557bc179788a5b11bdb01b204fa591a4017d95d0b86be92b0eee18f3a84",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "files",
+            "wasm"
+          ],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "UdlqoBgxSWzNs42G3YCPY9t42fgh5OJPwdDK+cap+glirashjZFeAkwD3pQ9W/EgwS0KsD22pI+mzBW0n+GpDg=="
+        }
+      }
+    },
+    "pipeline": {
+      "name": "Pipeline",
+      "description": "Coding tasks that run as Claude threads in their own worktrees, wait for a slot, ask you, and land on the base branch.",
+      "icon": "view_kanban",
+      "author": "mrknrb",
+      "versions": {
+        "0.10.1": {
+          "url": "packages/pipeline-0.10.1.zip",
+          "sha256": "d174a285ec77e70f9703fa77cf613724438bc101518ef8ccac45a8571124182f",
+          "dependencies": {
+            "claude": ">=0.3"
+          },
+          "permissions": [
+            "data",
+            "pc",
+            "supabase"
+          ],
+          "needs": [
+            "pc",
+            "node",
+            "git"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "K+2O2OT8UVbcQTyI7lwJ/pgtBVoZ/6+rLbMlQ+ala15EHuzjU0jOWhdTm2xV7VKm7rr1NycSlFOKaGxARa6lAA==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See tasks, the board, branches and settings",
+              "defaults": {
+                "agents": "allow",
+                "plugin:concepts": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "thread",
+              "label": "Show a task in its Claude thread, and message, answer, stop and act on it there",
+              "defaults": {
+                "agents": "allow",
+                "plugin:claude": "allow"
+              }
+            },
+            {
+              "id": "work",
+              "label": "Propose, edit and run tasks",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "manage",
+              "label": "Land, discard, delete tasks; remove worktrees; change modes, settings, views",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "pc",
+              "label": "Open windows on the PC (VS Code, File Explorer, ▶ Try)",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "claude",
+              "version": ">=0.3",
+              "groups": [
+                "read",
+                "conversations",
+                "ask",
+                "run",
+                "approve"
+              ],
+              "required": true,
+              "why": "Runs every task as a Claude thread: starts, reads, steers, answers and archives it, and writes briefs"
+            },
+            {
+              "plugin": "concepts",
+              "groups": [
+                "read",
+                "write"
+              ],
+              "required": false,
+              "why": "Links tasks to the concept map, moves their nodes' Status, and gives each task its project's map"
+            },
+            {
+              "plugin": "accounts",
+              "groups": [
+                "read"
+              ],
+              "required": false,
+              "why": "Pacing: the room every Claude account has left (plan-weighted, below its switch points), and when another account has room"
+            }
+          ]
+        }
+      }
+    },
+    "research": {
+      "name": "Research",
+      "description": "Explainable data analysis: methods written as plain Python that explain every number from their own code (GC-FID activity assays, tables), peak review, reports, a results database for the whole PhD; plus quick charts and tests.",
+      "icon": "science",
+      "author": "layr",
+      "versions": {
+        "0.3.0": {
+          "url": "packages/research-0.3.0.zip",
+          "sha256": "69c1159b6452620d6350b6f1adc178f561868c19fb031348138212224c9c163f",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "pc",
+            "files"
+          ],
+          "needs": [
+            "pc",
+            "python"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "IS51uDJJTW9eH5d5rghqVS8DRXFBZKc4nypPzPWeztNlsqvIubXe+2I0fi3WVcH5cHEtl2cwloi3JznPX4OiCQ==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See datasets, methods and their code, experiments, results, explanations",
+              "defaults": {
+                "agents": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "load",
+              "label": "Load data (also files from this PC) and create experiments",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "build",
+              "label": "Write methods (as drafts you approve), change and run experiments, write reports",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "propose",
+              "label": "Propose corrections (they wait for your approval)",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "approve",
+              "label": "Approve or reject corrections and method drafts",
+              "defaults": {}
+            },
+            {
+              "id": "remove",
+              "label": "Delete datasets, experiments and methods",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "claude",
+              "groups": [
+                "ask"
+              ],
+              "required": false,
+              "why": "Explain a function or selected lines in plain words, and draft a Methods paragraph (one-off questions to Claude)"
+            }
+          ]
+        }
+      }
+    },
+    "research-desk": {
+      "name": "Research desk",
+      "description": "A pack for lab work: experiments and their explained methods big in the middle, quick charts, notes and the web on the side, and a desk for writing up.",
+      "icon": "biotech",
+      "author": "layr",
+      "kind": "app",
+      "versions": {
+        "0.3.1": {
+          "url": "packages/research-desk-0.3.1.zip",
+          "sha256": "3bf3082d808e03f3b1a1cfad8ebb17719f5e0b622c5e45f141cabfb3e02e7c08",
+          "dependencies": {
+            "browser": "^0.1",
+            "notes": "^0.1",
+            "research": "^0.3"
+          },
+          "permissions": [],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "oJz8JngZo4tKi7dXLLeWjJ2soSYCAkB1aUiiRyM99itaQdGJfhnZq4r7vGNq3YJkDg1/Uumls0OD71YwqyTeAA==",
+          "sessions": [
+            {
+              "id": "analyse",
+              "name": "Analyse data",
+              "description": "Experiments and quick analyses big in the middle; lab notes and the web on the side.",
+              "icon": "science"
+            },
+            {
+              "id": "write-up",
+              "name": "Write up",
+              "description": "A write-up in Notes next to the experiments it reports.",
+              "icon": "edit_note"
+            }
+          ]
+        }
+      }
+    },
+    "scraper": {
+      "name": "Web tools",
+      "description": "Reads and uses web pages for agents and plugins: its own in layr's browser (hidden, or in a tab you can see), and the pages you have open in layr's tabs once you allow it. Markdown of articles, fields by CSS selector, links, clicks and typing.",
+      "icon": "travel_explore",
+      "author": "layr",
+      "versions": {
+        "0.1.0": {
+          "url": "packages/scraper-0.1.0.zip",
+          "sha256": "79a18fdc493c5eaa57b57395aed2427d5c86a29c37c232abf14452331ffe62ba",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "webviews",
+            "webviews:pages",
+            "pc"
+          ],
+          "needs": [
+            "pc",
+            "node"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "Scc1+3jtcfeIglsldhXcfvK3hJXn1Lp5BV7Smikxcno8N1JXeAzO3yvi9kDfNrD73uQcoSEgfSmHiSSSDjK6CA==",
+          "access": [
+            {
+              "id": "read",
+              "label": "Open web pages in layr's browser (hidden or in a tab) and read them",
+              "defaults": {}
+            },
+            {
+              "id": "act",
+              "label": "Click, type and run scripts in those pages",
+              "defaults": {}
+            },
+            {
+              "id": "pages",
+              "label": "Use the web pages you have open in layr's tabs",
+              "defaults": {}
+            }
+          ]
+        }
+      }
+    },
+    "stickfight": {
+      "name": "Stick fight",
+      "description": "A stick figure loose on Wikipedia pages: everything visible is solid, and what it shoots, kicks or blows up gets physics and flies apart.",
+      "icon": "sports_martial_arts",
+      "author": "layr",
+      "versions": {
+        "0.1.1": {
+          "url": "packages/stickfight-0.1.1.zip",
+          "sha256": "b2d2073f83e49a6eeb2ffdb3f48d7196182fa5d94c92b1029b472aa6479d035c",
+          "dependencies": {},
+          "permissions": [],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "nASLxAKStnvWiqfwLhux3KEPu2ZHXhCHZgpulaNZUhvJDVSAWekmEZTp9tv4B09najS6jRZpLFqBrSZDFQRDBg=="
+        }
+      }
+    },
+    "wiki": {
+      "name": "Wiki",
+      "description": "Your personal knowledge base: Markdown pages linked to each other, page types, history, AI tools, and a folder copy Obsidian can open.",
+      "icon": "menu_book",
+      "author": "mrknrb",
+      "versions": {
+        "0.3.0": {
+          "url": "packages/wiki-0.3.0.zip",
+          "sha256": "3381ec6e1d23b1d7eb4db9d3ff992dda45d2d3bfbcf34a4ce057e01924f40f31",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "pc",
+            "supabase",
+            "files",
+            "network:https://tirznddjqwrovpvasgpn.supabase.co"
+          ],
+          "needs": [
+            "pc",
+            "node"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "aRAtCN4OLgReAXl0tYuNrE24DEO4lAgvouiQD5DckEgE5T/BCJ01dfI3wQlCqraDrxScqvpQCZbFPmNXr0TiCQ==",
+          "access": [
+            {
+              "id": "read",
+              "label": "Read your wiki",
+              "defaults": {
+                "agents": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "write",
+              "label": "Write and change pages in your wiki (every change can be undone)",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "share",
+              "label": "Make pages of your wiki public (anyone with the link can read them)",
+              "defaults": {}
+            },
+            {
+              "id": "files",
+              "label": "Bring files from this PC into your wiki",
+              "defaults": {
+                "agents": "allow"
+              }
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "claude",
+              "groups": [
+                "ask",
+                "run",
+                "read"
+              ],
+              "required": false,
+              "why": "Ask Claude opens a Claude thread beside the wiki; AI actions on selected text and suggested links and tags ask one-off questions"
+            },
+            {
+              "plugin": "scraper",
+              "groups": [
+                "read"
+              ],
+              "required": false,
+              "why": "Clip a web page: reads its article and saves it as a page"
+            }
+          ]
+        }
+      }
+    }
+  }
 }
