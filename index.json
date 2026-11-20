@@ -81,7 +81,7 @@
     },
     "browser": {
       "name": "Browser",
-      "description": "Web pages in tabs, with a start page for your bookmarks.",
+      "description": "Web pages in tabs: a start page for your bookmarks, private tabs, history, downloads and site settings.",
       "icon": "public",
       "author": "layr",
       "versions": {
@@ -96,6 +96,18 @@
           "layr": "^0.1",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
           "signature": "EXUxvBpReq/vE4Pg4FofgRvmdF7jPxfQpzgdKVCD6ntGPnWIh0+88s9eTAAd+oMgLvBv3sasxJO1eBXn2z4FBA=="
+        },
+        "0.2.0": {
+          "url": "packages/browser-0.2.0.zip",
+          "sha256": "d78127b9373eed77b68af7288177871aafded65ebf7e6a9f0211550382e96ff2",
+          "dependencies": {},
+          "permissions": [
+            "data"
+          ],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "kUNKsYEznKLfuJMEMYiuhaG+z0hNLLSz0BL1zsnkFxvz9M5xFKm8MCRY4xJ4HejDKs98FyxyAUihcp6d10VuBg=="
         }
       }
     },
@@ -199,7 +211,7 @@
     },
     "claude": {
       "name": "Claude Code",
-      "description": "Claude Code threads in your projects and worktrees, and on your layr plugins and Chrome extensions, with approvals and live streaming.",
+      "description": "Claude Code threads in your projects and worktrees, and on your layr plugins and Chrome extensions (a list per thread of the plugins it may read and change), with approvals and live streaming.",
       "icon": "smart_toy",
       "author": "mrknrb",
       "versions": {
@@ -315,6 +327,98 @@
           "backend": "process",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
           "signature": "+n+YmbY4w5C1bTWIJ4MTTSADrUz+sRmqXXlWbi4R9fn2HM/8fwV0a8aQjnjt5vFehxdtDZxyzAWo7LroNmfTCA==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See projects, threads' status, models and usage",
+              "defaults": {
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "conversations",
+              "label": "Read what threads say",
+              "defaults": {
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "ask",
+              "label": "Ask Claude one-off questions (uses your plan)",
+              "defaults": {
+                "plugin:concepts": "allow",
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "run",
+              "label": "Start, steer and stop threads; change projects",
+              "defaults": {
+                "plugin:care": "allow",
+                "plugin:devtools": "allow",
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "approve",
+              "label": "Answer threads' permission requests and change their permissions",
+              "defaults": {
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "build-times",
+              "label": "See how long the builds, tests and checks threads run take",
+              "defaults": {
+                "agents": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "pc",
+              "label": "Open terminal windows running commands, and folders, on your PC",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "pipeline",
+              "groups": [
+                "thread"
+              ],
+              "required": false,
+              "why": "In a pipeline task's thread: the task's buttons, and your messages and answers go through the pipeline"
+            },
+            {
+              "plugin": "concepts",
+              "groups": [
+                "read"
+              ],
+              "required": false,
+              "why": "Shows the concept nodes a thread touched, and the prototype pages linked in its replies"
+            }
+          ]
+        },
+        "0.7.0": {
+          "url": "packages/claude-0.7.0.zip",
+          "sha256": "b71a6c43c2428419bebc50c8f6377987826d254b62f6b6c9d8e384db2ee66d21",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "pc",
+            "agents",
+            "packages",
+            "events:global"
+          ],
+          "needs": [
+            "pc",
+            "node",
+            "claude-code"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "A/9MMDIqukJVq+EEjaZp23SNHOMCou8F2UQ3f+0NO8i33vlUQTIkz9qEtafqZr2hE2Md/h6suskawZPx1PduBQ==",
           "access": [
             {
               "id": "read",
@@ -836,6 +940,97 @@
           "backend": "process",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
           "signature": "GWI8NUK0MyeJOd1CYuYQq0Bgws8X/wktPAbq26CBHfYwMsT0C87UeLWkbOMlSliylARJljdi8BIARslU4OR7CA==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See tasks, the board, branches and settings",
+              "defaults": {
+                "agents": "allow",
+                "plugin:concepts": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "thread",
+              "label": "Show a task in its Claude thread, and message, answer, stop and act on it there",
+              "defaults": {
+                "agents": "allow",
+                "plugin:claude": "allow"
+              }
+            },
+            {
+              "id": "work",
+              "label": "Propose, edit and run tasks",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "manage",
+              "label": "Land, discard, delete tasks; remove worktrees; change modes, settings, views",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "pc",
+              "label": "Open windows on the PC (VS Code, File Explorer, ▶ Try)",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "claude",
+              "version": ">=0.3",
+              "groups": [
+                "read",
+                "conversations",
+                "ask",
+                "run",
+                "approve"
+              ],
+              "required": true,
+              "why": "Runs every task as a Claude thread: starts, reads, steers, answers and archives it, and writes briefs"
+            },
+            {
+              "plugin": "concepts",
+              "groups": [
+                "read",
+                "write"
+              ],
+              "required": false,
+              "why": "Links tasks to the concept map, moves their nodes' Status, and gives each task its project's map"
+            },
+            {
+              "plugin": "accounts",
+              "groups": [
+                "read"
+              ],
+              "required": false,
+              "why": "Pacing: the room every Claude account has left (plan-weighted, below its switch points), and when another account has room"
+            }
+          ]
+        },
+        "0.13.0": {
+          "url": "packages/pipeline-0.13.0.zip",
+          "sha256": "ad2d710948f8d063304c303f2c24c86663ee2854d691c74f9ae11069b946419e",
+          "dependencies": {
+            "claude": ">=0.3"
+          },
+          "permissions": [
+            "data",
+            "pc",
+            "supabase"
+          ],
+          "needs": [
+            "pc",
+            "node",
+            "git"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "zcCrz7ZOzDMPkxNgelTaY06kbEBqM3WkagUo/NWFWjtBsOg+es2CWwpFlaEcs7M3jPVvkYx7wsNPJMv0ClLXAA==",
           "access": [
             {
               "id": "read",
