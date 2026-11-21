@@ -1627,8 +1627,8 @@
           ]
         },
         "0.17.0": {
-          "url": "packages/pipeline-0.17.0.zip",
-          "sha256": "7c0f3f004403b3cf9ba9ee4cc260e3d92eb0f63e3bec3d7ac88ad78a2fbf440e",
+          "url": "https://github.com/mrknrb/layr-pipeline/releases/download/v0.17.0/pipeline-0.17.0.zip",
+          "sha256": "b35b91fa84dd9965c0c64f0e4897ab93a3147202ab7d4fab254260a4e3deab66",
           "dependencies": {
             "claude": ">=0.3"
           },
@@ -1645,7 +1645,7 @@
           "layr": "^0.1",
           "backend": "process",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-          "signature": "e1NGAPiVwMOFmaeEJCkVlToKeFDjA8mlqfJ5V/8XyjANmOC0IqbC9CIzskcr88tvzMucaS1ayFtlTc1jRJvDAQ==",
+          "signature": "i6CxtV5CwSNzT0mIaXahIvY5vTAs32UEbhbsz0dnHipH8XW7owzw7u1lI9PSGBRHMge5mmXwXiYXGdn4GC7LCw==",
           "access": [
             {
               "id": "read",
@@ -1796,8 +1796,8 @@
           ]
         },
         "0.4.0": {
-          "url": "packages/research-0.4.0.zip",
-          "sha256": "39d8f4abdfb3677769685af407ab7a94c3d52e91ff22c2e2366655a369015872",
+          "url": "https://github.com/mrknrb/layr-research/releases/download/v0.4.0/research-0.4.0.zip",
+          "sha256": "2b4aab3232da35c13979708dc6c28c5b7c0714959dd86bbc3b5a761b69cb885c",
           "dependencies": {},
           "permissions": [
             "data",
@@ -1811,7 +1811,7 @@
           "layr": "^0.1",
           "backend": "process",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-          "signature": "7U1MqMZph8loXfPfipsyU7WHaGY8X3+aGFONxehLPaNcOcg3pNvf/F2StYV2vXBoRqhJ2EJH/rv6B31+vKGcAA==",
+          "signature": "sixaq+a8DDBC1ISmMLfkVjMLp0giZ6FZZ9lC71iEFXFCYq3e7OVUvNejCEteMzdYS/S2nNBe0YH0eU0fHh6JDg==",
           "access": [
             {
               "id": "read",
@@ -1902,8 +1902,8 @@
           ]
         },
         "0.3.2": {
-          "url": "packages/research-desk-0.3.2.zip",
-          "sha256": "81ace75016cebf6e31afd85de6ab2b6b13bf66732f3daace13bdc7e5f4fa274c",
+          "url": "https://github.com/mrknrb/layr-research-desk/releases/download/v0.3.2/research-desk-0.3.2.zip",
+          "sha256": "0f383aeaca18a19949cc16e22843bcf07fa795216704e76d8fff77fbcbb07d1b",
           "dependencies": {
             "browser": ">=0.1.0, <1.0.0",
             "notes": ">=0.1.0, <1.0.0",
@@ -1913,7 +1913,7 @@
           "needs": [],
           "layr": "^0.1",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-          "signature": "ke1tuB5Kz7GOeZlq7sqFMpo+oC3eesYAOZebZDEjEJJz2tPpamsnnh+QlyFACqkOW8vEJ6rY2gJULtTEH2AbCQ==",
+          "signature": "yui/mhkOX9OMbx0NedItrOrCsnZcLnlRVFtA1BLzEi9JtptZYprtePCQJgTbhG3fXV3RmJgpEHHi6/JiIK6wAA==",
           "sessions": [
             {
               "id": "analyse",
@@ -1955,6 +1955,42 @@
           "backend": "process",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
           "signature": "Scc1+3jtcfeIglsldhXcfvK3hJXn1Lp5BV7Smikxcno8N1JXeAzO3yvi9kDfNrD73uQcoSEgfSmHiSSSDjK6CA==",
+          "access": [
+            {
+              "id": "read",
+              "label": "Open web pages in layr's browser (hidden or in a tab) and read them",
+              "defaults": {}
+            },
+            {
+              "id": "act",
+              "label": "Click, type and run scripts in those pages",
+              "defaults": {}
+            },
+            {
+              "id": "pages",
+              "label": "Use the web pages you have open in layr's tabs",
+              "defaults": {}
+            }
+          ]
+        },
+        "0.1.1": {
+          "url": "https://github.com/mrknrb/layr-scraper/releases/download/v0.1.1/scraper-0.1.1.zip",
+          "sha256": "45bc922bdbb1edfb6accd756c1bda9df860f23dede8f4c43ff7241b048628680",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "webviews",
+            "webviews:pages",
+            "pc"
+          ],
+          "needs": [
+            "pc",
+            "node"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "1aM67EJFQS46e8NIV8fiehc4Lke24XDTTVwUyJQFj9QOWgbwwJVZUd2WMFBtK25UVJzYgLVIpcI7H7z5yTmEAQ==",
           "access": [
             {
               "id": "read",
@@ -2018,6 +2054,75 @@
           "backend": "process",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
           "signature": "aRAtCN4OLgReAXl0tYuNrE24DEO4lAgvouiQD5DckEgE5T/BCJ01dfI3wQlCqraDrxScqvpQCZbFPmNXr0TiCQ==",
+          "access": [
+            {
+              "id": "read",
+              "label": "Read your wiki",
+              "defaults": {
+                "agents": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "write",
+              "label": "Write and change pages in your wiki (every change can be undone)",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "share",
+              "label": "Make pages of your wiki public (anyone with the link can read them)",
+              "defaults": {}
+            },
+            {
+              "id": "files",
+              "label": "Bring files from this PC into your wiki",
+              "defaults": {
+                "agents": "allow"
+              }
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "claude",
+              "groups": [
+                "ask",
+                "run",
+                "read"
+              ],
+              "required": false,
+              "why": "Ask Claude opens a Claude thread beside the wiki; AI actions on selected text and suggested links and tags ask one-off questions"
+            },
+            {
+              "plugin": "scraper",
+              "groups": [
+                "read"
+              ],
+              "required": false,
+              "why": "Clip a web page: reads its article and saves it as a page"
+            }
+          ]
+        },
+        "0.3.1": {
+          "url": "https://github.com/mrknrb/layr-wiki/releases/download/v0.3.1/wiki-0.3.1.zip",
+          "sha256": "40ae8b504fa35568c4946d2840f6533e18c088e8b1f0502dac94a055a981f3ab",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "pc",
+            "supabase",
+            "files",
+            "network:https://tirznddjqwrovpvasgpn.supabase.co"
+          ],
+          "needs": [
+            "pc",
+            "node"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "OQIuSXBdhO+NLfiL6hln2aWRQyo1M93bCKmf043SOp2NsUL/7BybMUkMcYa8sAscvpTtDTPyoHuKzs3LsoeECQ==",
           "access": [
             {
               "id": "read",
