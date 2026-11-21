@@ -1,11 +1,11 @@
 {
   "v": 1,
-  "version": "0.4.0",
-  "notes": "Browser: links open in new tabs like a real browser, private tabs, history, find, zoom per site, downloads",
+  "version": "0.5.0",
+  "notes": "Plugin worktrees: tasks and threads can change plugins in their own copies, then Land, Try or Drop. Claude threads in one list.",
   "windows": {
-    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.4.0/layr-windows-0.4.0.zip",
-    "sha256": "b8f588c5cfe0e81c4c220207e6d9c137a26064a2236f3903aeee99ff3950e159",
+    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.5.0/layr-windows-0.5.0.zip",
+    "sha256": "877ef54844996e4ca0cb14c284eb3c5b7f3b8a26943d130d0a091255b69b9bd4",
     "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-    "signature": "lSk9P8FhvUjMCV2FMv7eFxZuluXXKZtkXF0z2AzS+XcJzOmfeHDgole7I+Gv5UneuZf2vMT/Qrsq9lZ5lOEaBw=="
+    "signature": "ClCCTmQ1S60c9nTP5o7TJL6NeKEb/ngSdypbb1un2oWdYQ5OwclY8wG+wnXLxVtERXV3iDa9GUIydiY86WYyAw=="
   }
 }
