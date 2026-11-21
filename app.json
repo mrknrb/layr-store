@@ -1,11 +1,11 @@
 {
   "v": 1,
-  "version": "0.5.0",
-  "notes": "Plugin worktrees: tasks and threads can change plugins in their own copies, then Land, Try or Drop. Claude threads in one list.",
+  "version": "0.5.1",
+  "notes": "Plugin page: Can't run only when a plugin really can't run",
   "windows": {
-    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.5.0/layr-windows-0.5.0.zip",
-    "sha256": "877ef54844996e4ca0cb14c284eb3c5b7f3b8a26943d130d0a091255b69b9bd4",
+    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.5.1/layr-windows-0.5.1.zip",
+    "sha256": "f9f1dfc169c188d0fcbcec0d218c1c992aca2ceb3af10880927c41c90f07a403",
     "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-    "signature": "ClCCTmQ1S60c9nTP5o7TJL6NeKEb/ngSdypbb1un2oWdYQ5OwclY8wG+wnXLxVtERXV3iDa9GUIydiY86WYyAw=="
+    "signature": "862j73KqBJW6brjFbB3lS3zTaQ3GCr2fd+wYEIzdUUrb5+9JXgrf8cmAkkUlrZwXKNDt1NwiCAuLhv+GI9ebDg=="
   }
 }
