@@ -145,6 +145,34 @@
               "icon": "account_tree"
             }
           ]
+        },
+        "0.2.1": {
+          "url": "packages/builder-0.2.1.zip",
+          "sha256": "44b0f5fd92ccf64b86fee5656d829f93429c950221c04bcce66d9a761534f347",
+          "dependencies": {
+            "claude": ">=0.3.0, <1.0.0",
+            "concepts": ">=0.2.0, <1.0.0",
+            "pipeline": ">=0.4.0, <1.0.0"
+          },
+          "permissions": [],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "2nEFnDkRveQYIWSBqZSePURoQONnLenlfXkRgz+sXAaoYt+0TQYRohxh+a/0mhlgXOP8o6Hr3apHdoWqIhugDA==",
+          "sessions": [
+            {
+              "id": "make-plugin",
+              "name": "Make a plugin",
+              "description": "Claude, with a first message ready, makes a small plugin; its page in layr (About this plugin) shows its history and versions.",
+              "icon": "extension"
+            },
+            {
+              "id": "plan",
+              "name": "Plan a project",
+              "description": "The pipeline's task board next to the concept map: plan the ideas, then run them as Claude tasks.",
+              "icon": "account_tree"
+            }
+          ]
         }
       }
     },
@@ -215,6 +243,98 @@
       "icon": "smart_toy",
       "author": "mrknrb",
       "versions": {
+        "0.10.0": {
+          "url": "packages/claude-0.10.0.zip",
+          "sha256": "d549674ded2106fada96fcb965cdb7b95cd915c0472b799af84a3dc70a9f436a",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "pc",
+            "agents",
+            "packages",
+            "events:global"
+          ],
+          "needs": [
+            "pc",
+            "node",
+            "claude-code"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "uFIZDH/DBgVLVQ0iTtNjwpQNP+UlzKG5XpgvaJk9w83kBfH5CZa1QR5qPScwr4b+TaC3WoMNmpm2QxHH94T4Cg==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See projects, threads' status, models and usage",
+              "defaults": {
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "conversations",
+              "label": "Read what threads say",
+              "defaults": {
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "ask",
+              "label": "Ask Claude one-off questions (uses your plan)",
+              "defaults": {
+                "plugin:concepts": "allow",
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "run",
+              "label": "Start, steer and stop threads; change projects",
+              "defaults": {
+                "plugin:care": "allow",
+                "plugin:devtools": "allow",
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "approve",
+              "label": "Answer threads' permission requests and change their permissions",
+              "defaults": {
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "build-times",
+              "label": "See how long the builds, tests and checks threads run take",
+              "defaults": {
+                "agents": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "pc",
+              "label": "Open terminal windows running commands, and folders, on your PC",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "pipeline",
+              "groups": [
+                "thread"
+              ],
+              "required": false,
+              "why": "In a pipeline task's thread: the task's buttons, and your messages and answers go through the pipeline"
+            },
+            {
+              "plugin": "concepts",
+              "groups": [
+                "read"
+              ],
+              "required": false,
+              "why": "Shows the concept nodes a thread touched, and the prototype pages linked in its replies"
+            }
+          ]
+        },
         "0.5.0": {
           "url": "packages/claude-0.5.0.zip",
           "sha256": "b257b3d90e59efce28d500246b077ca972fb897a33ec1743b73ff8e1082d93d8",
@@ -650,6 +770,34 @@
           "layr": "^0.1",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
           "signature": "kdoaCm7kTRxWT6KBlVQMoDa2SKSBayOMbYRnq57l15CFip2t3gOvISKyHO0gjWTCxpDcXefGUPwRl36qccjjBg==",
+          "sessions": [
+            {
+              "id": "research",
+              "name": "Research a topic",
+              "description": "Claude, with a first message ready, researches the web and writes linked wiki pages; the wiki and the web beside it.",
+              "icon": "travel_explore"
+            },
+            {
+              "id": "read",
+              "name": "Read and take notes",
+              "description": "A web page on the left, your wiki on the right to write down what you learn.",
+              "icon": "book"
+            }
+          ]
+        },
+        "0.1.1": {
+          "url": "packages/knowledge-0.1.1.zip",
+          "sha256": "00028158a19a7488f5c7c41d1ad26e0a7a842f17d93ba8e568bade7821c4c102",
+          "dependencies": {
+            "browser": ">=0.1.0, <1.0.0",
+            "claude": ">=0.3.0, <1.0.0",
+            "wiki": ">=0.1.0, <1.0.0"
+          },
+          "permissions": [],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "4avLJzJ42Hes9s1DvgfM+PUTAZyo5JJ02tiIzzWJAQ6HvzRthkYiyowp2l/XRqJ31RD1RGrGAWMHqgmH2j8ECw==",
           "sessions": [
             {
               "id": "research",
@@ -1192,6 +1340,98 @@
               "why": "Pacing: the room every Claude account has left (plan-weighted, below its switch points), and when another account has room"
             }
           ]
+        },
+        "0.16.0": {
+          "url": "packages/pipeline-0.16.0.zip",
+          "sha256": "7034eab42dea320a8feb4f82eee7dc08683eca5100d6277e42ed51c6da790bfa",
+          "dependencies": {
+            "claude": ">=0.3"
+          },
+          "permissions": [
+            "data",
+            "pc",
+            "supabase"
+          ],
+          "needs": [
+            "pc",
+            "node",
+            "git"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "1Jt+56KgWN8MeetLmEiHOTEx40T/FRGn9lAkRxrX/JqoF1o+DYpzYxiuK7kqXWNzYBXxnZpBn3iJ0UiphRtDAA==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See tasks, the board, branches and settings",
+              "defaults": {
+                "agents": "allow",
+                "plugin:concepts": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "thread",
+              "label": "Show a task in its Claude thread, and message, answer, stop and act on it there",
+              "defaults": {
+                "agents": "allow",
+                "plugin:claude": "allow"
+              }
+            },
+            {
+              "id": "work",
+              "label": "Propose, edit and run tasks",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "manage",
+              "label": "Land, discard, delete tasks; remove worktrees; change modes, settings, views",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "pc",
+              "label": "Open windows on the PC (VS Code, File Explorer, ▶ Try)",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "claude",
+              "version": ">=0.3",
+              "groups": [
+                "read",
+                "conversations",
+                "ask",
+                "run",
+                "approve"
+              ],
+              "required": true,
+              "why": "Runs every task as a Claude thread: starts, reads, steers, answers and archives it, and writes briefs"
+            },
+            {
+              "plugin": "concepts",
+              "groups": [
+                "read",
+                "write"
+              ],
+              "required": false,
+              "why": "Links tasks to the concept map, moves their nodes' Status, and gives each task its project's map"
+            },
+            {
+              "plugin": "accounts",
+              "groups": [
+                "read",
+                "switch"
+              ],
+              "required": false,
+              "why": "Pacing: every account's room left and when another has room; switching to the right kind of account for a task whose model runs only there"
+            }
+          ]
         }
       }
     },
@@ -1269,6 +1509,75 @@
               "why": "Explain a function or selected lines in plain words, and draft a Methods paragraph (one-off questions to Claude)"
             }
           ]
+        },
+        "0.4.0": {
+          "url": "packages/research-0.4.0.zip",
+          "sha256": "39d8f4abdfb3677769685af407ab7a94c3d52e91ff22c2e2366655a369015872",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "pc",
+            "files"
+          ],
+          "needs": [
+            "pc",
+            "python"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "7U1MqMZph8loXfPfipsyU7WHaGY8X3+aGFONxehLPaNcOcg3pNvf/F2StYV2vXBoRqhJ2EJH/rv6B31+vKGcAA==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See datasets, methods and their code, experiments, results, explanations",
+              "defaults": {
+                "agents": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "load",
+              "label": "Load data (also files from this PC) and create experiments",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "build",
+              "label": "Write methods (as drafts you approve), change and run experiments, write reports",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "propose",
+              "label": "Propose corrections (they wait for your approval)",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "approve",
+              "label": "Approve or reject corrections and method drafts",
+              "defaults": {}
+            },
+            {
+              "id": "remove",
+              "label": "Delete datasets, experiments and methods",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "claude",
+              "groups": [
+                "ask"
+              ],
+              "required": false,
+              "why": "Explain a function or selected lines in plain words, and draft a Methods paragraph (one-off questions to Claude)"
+            }
+          ]
         }
       }
     },
@@ -1292,6 +1601,34 @@
           "layr": "^0.1",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
           "signature": "oJz8JngZo4tKi7dXLLeWjJ2soSYCAkB1aUiiRyM99itaQdGJfhnZq4r7vGNq3YJkDg1/Uumls0OD71YwqyTeAA==",
+          "sessions": [
+            {
+              "id": "analyse",
+              "name": "Analyse data",
+              "description": "Experiments and quick analyses big in the middle; lab notes and the web on the side.",
+              "icon": "science"
+            },
+            {
+              "id": "write-up",
+              "name": "Write up",
+              "description": "A write-up in Notes next to the experiments it reports.",
+              "icon": "edit_note"
+            }
+          ]
+        },
+        "0.3.2": {
+          "url": "packages/research-desk-0.3.2.zip",
+          "sha256": "81ace75016cebf6e31afd85de6ab2b6b13bf66732f3daace13bdc7e5f4fa274c",
+          "dependencies": {
+            "browser": ">=0.1.0, <1.0.0",
+            "notes": ">=0.1.0, <1.0.0",
+            "research": ">=0.3.0, <1.0.0"
+          },
+          "permissions": [],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "ke1tuB5Kz7GOeZlq7sqFMpo+oC3eesYAOZebZDEjEJJz2tPpamsnnh+QlyFACqkOW8vEJ6rY2gJULtTEH2AbCQ==",
           "sessions": [
             {
               "id": "analyse",
