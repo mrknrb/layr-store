@@ -55,6 +55,55 @@
               "why": "Reads the PC's Claude usage from Claude Code threads; without it, accounts measures the usage itself"
             }
           ]
+        },
+        "0.1.3": {
+          "url": "https://github.com/mrknrb/layr-accounts/releases/download/v0.1.3/accounts-0.1.3.zip",
+          "sha256": "f12d4df2989d0e2a83ab15540fe6610874be5e3613c1e1f68cc1b959104f06af",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "pc"
+          ],
+          "needs": [
+            "pc",
+            "node"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "HtbNjj8QZKyKlJsJaa0OKXbZWgmYvLVJKSSaZ9JvmXqga7x5IdK11pvFIs3A14hOTg5BYhYqOYtZFJcoygodAQ==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See accounts' usage",
+              "defaults": {
+                "agents": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "switch",
+              "label": "Switch accounts and change settings",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "logins",
+              "label": "Add, import and remove logins",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "claude",
+              "groups": [
+                "read"
+              ],
+              "required": false,
+              "why": "Reads the PC's Claude usage from Claude Code threads; without it, accounts measures the usage itself"
+            }
+          ]
         }
       }
     },
@@ -65,8 +114,8 @@
       "author": "layr",
       "versions": {
         "0.1.1": {
-          "url": "packages/adblock-0.1.1.zip",
-          "sha256": "f5f4aeba095d5fd1cffa0d8e86e0456719a69d607a24d4f5293c01a8ff60dee5",
+          "url": "https://github.com/mrknrb/layr-adblock/releases/download/v0.1.1/adblock-0.1.1.zip",
+          "sha256": "774b60b9fa0b9e29f222fa6df682b629fc753e93e4263de5445488c0a06adf5a",
           "dependencies": {},
           "permissions": [
             "data",
@@ -75,7 +124,7 @@
           "needs": [],
           "layr": "^0.1",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-          "signature": "TAgtUzYQFSoJc/1MSyxS5p9tuBA80NzHQJ50fIdEsgxZSYTe3mq3XrhoOGXNEJYBiq58SMGydtEQH0QEBv2FCw=="
+          "signature": "xpg4uL68ApxBp1xokJ7dN3hvqx5qufVY+hO/mPZQqevkMfKGfy4GRdeshv6rNDsBDfeJAWmb2OQSpu1GjDC5Bg=="
         }
       }
     },
@@ -98,8 +147,8 @@
           "signature": "EXUxvBpReq/vE4Pg4FofgRvmdF7jPxfQpzgdKVCD6ntGPnWIh0+88s9eTAAd+oMgLvBv3sasxJO1eBXn2z4FBA=="
         },
         "0.2.0": {
-          "url": "packages/browser-0.2.0.zip",
-          "sha256": "d78127b9373eed77b68af7288177871aafded65ebf7e6a9f0211550382e96ff2",
+          "url": "https://github.com/mrknrb/layr-browser/releases/download/v0.2.0/browser-0.2.0.zip",
+          "sha256": "a81c854c964fbb14503fbca3d9756d01445b0b5afe02968da8038df1e68edbda",
           "dependencies": {},
           "permissions": [
             "data"
@@ -107,7 +156,7 @@
           "needs": [],
           "layr": "^0.1",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-          "signature": "kUNKsYEznKLfuJMEMYiuhaG+z0hNLLSz0BL1zsnkFxvz9M5xFKm8MCRY4xJ4HejDKs98FyxyAUihcp6d10VuBg=="
+          "signature": "pJ6+XTHMwsGSRo1COP2D+n4Z32SFzqWo6XoP4oxr09sc1NxWs5dU+NTs6y0/4b+800iiXxIRb1n+HhznczoMCw=="
         }
       }
     },
@@ -147,8 +196,8 @@
           ]
         },
         "0.2.1": {
-          "url": "packages/builder-0.2.1.zip",
-          "sha256": "44b0f5fd92ccf64b86fee5656d829f93429c950221c04bcce66d9a761534f347",
+          "url": "https://github.com/mrknrb/layr-builder/releases/download/v0.2.1/builder-0.2.1.zip",
+          "sha256": "ab75a141d6913d188a33f4cf37df978139abd035a0f0a9188b4fd529c93be08c",
           "dependencies": {
             "claude": ">=0.3.0, <1.0.0",
             "concepts": ">=0.2.0, <1.0.0",
@@ -158,7 +207,7 @@
           "needs": [],
           "layr": "^0.1",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-          "signature": "2nEFnDkRveQYIWSBqZSePURoQONnLenlfXkRgz+sXAaoYt+0TQYRohxh+a/0mhlgXOP8o6Hr3apHdoWqIhugDA==",
+          "signature": "hvKft8KRwxSUFwZEUXVitS1fNWjuopC/kY1mmzPPLFOGjm6c/a9iS3oxlOl2+2qs7bQD+LO2txYjxE9pPK+6Aw==",
           "sessions": [
             {
               "id": "make-plugin",
@@ -263,6 +312,98 @@
           "backend": "process",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
           "signature": "uFIZDH/DBgVLVQ0iTtNjwpQNP+UlzKG5XpgvaJk9w83kBfH5CZa1QR5qPScwr4b+TaC3WoMNmpm2QxHH94T4Cg==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See projects, threads' status, models and usage",
+              "defaults": {
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "conversations",
+              "label": "Read what threads say",
+              "defaults": {
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "ask",
+              "label": "Ask Claude one-off questions (uses your plan)",
+              "defaults": {
+                "plugin:concepts": "allow",
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "run",
+              "label": "Start, steer and stop threads; change projects",
+              "defaults": {
+                "plugin:care": "allow",
+                "plugin:devtools": "allow",
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "approve",
+              "label": "Answer threads' permission requests and change their permissions",
+              "defaults": {
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "build-times",
+              "label": "See how long the builds, tests and checks threads run take",
+              "defaults": {
+                "agents": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "pc",
+              "label": "Open terminal windows running commands, and folders, on your PC",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "pipeline",
+              "groups": [
+                "thread"
+              ],
+              "required": false,
+              "why": "In a pipeline task's thread: the task's buttons, and your messages and answers go through the pipeline"
+            },
+            {
+              "plugin": "concepts",
+              "groups": [
+                "read"
+              ],
+              "required": false,
+              "why": "Shows the concept nodes a thread touched, and the prototype pages linked in its replies"
+            }
+          ]
+        },
+        "0.11.0": {
+          "url": "packages/claude-0.11.0.zip",
+          "sha256": "c222a1013ac1069f748eb70434ee1910a5420a67f52925f3fab5fa914b17bc2d",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "pc",
+            "agents",
+            "packages",
+            "events:global"
+          ],
+          "needs": [
+            "pc",
+            "node",
+            "claude-code"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "tfqhKVk0FCM9XKTtNaMeMvZ76MPhMWT/woF9N0hZ9FRUanmN133F+mYesKS/TJVbQW1G9l6nrVcjZQK+aNmZAg==",
           "access": [
             {
               "id": "read",
@@ -620,8 +761,8 @@
       "author": "mrknrb",
       "versions": {
         "0.3.0": {
-          "url": "packages/concepts-0.3.0.zip",
-          "sha256": "7222fb2690cd11d123d3cf33439289e5efe77aac83860578de66aafa8d595c2d",
+          "url": "https://github.com/mrknrb/layr-concepts/releases/download/v0.3.0/concepts-0.3.0.zip",
+          "sha256": "9cb2ab6ce664fef78053dc99acfa8bc927e85c3b0930975b88db8daaaf82af47",
           "dependencies": {},
           "permissions": [
             "data",
@@ -636,7 +777,7 @@
           "layr": "^0.1",
           "backend": "process",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-          "signature": "XrCRZnAuzunRXFBrM2xIqDuawWQ+LfttfpN0gtmL915k8zPRw/gm2Xjsdq4lWBqRlY66gKlvIyVhpGd8mi5UAQ==",
+          "signature": "R7vPkmnyplziOu5qwkMgP/ZGdifeCJYD1ZAERIiX9NbZa9AqDR1Le2gvad70qSOLlHIT4PVoxKBr4ZXWIo9fBg==",
           "access": [
             {
               "id": "read",
@@ -703,6 +844,16 @@
           "layr": "^0.1",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
           "signature": "Sq9wVwC/h4P4HxGxL8CZM+7TsUGxbOnTb2hkmQvPTpddCm5hBlmW/7jgK7KKq2TvwJDPxP5aM524yyzmUueUDw=="
+        },
+        "0.2.1": {
+          "url": "https://github.com/mrknrb/layr-devtools/releases/download/v0.2.1/devtools-0.2.1.zip",
+          "sha256": "75f9a53eb909447033cb485c226cc4a24dd919de39872f969a1cd659be1ce7fd",
+          "dependencies": {},
+          "permissions": [],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "7dUS0sxMzywoJRm4+hGCD+ylkc4hLn+ozFYWrPxnwvzFbB2eYcLxbsaBd10pqGCa6hbOI5dDUR1tOQvVzzwKBA=="
         }
       }
     },
@@ -747,6 +898,22 @@
           "backend": "app",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
           "signature": "zTYshNdMyxj3NSeEXumS9bWjHNaqopfgHGSLT7Bt4jP4QW5LOxvdbdknXwpNZyTFOpTgAHo9w6zKl5xtguQuDA=="
+        },
+        "0.1.2": {
+          "url": "https://github.com/mrknrb/layr-jupyter/releases/download/v0.1.2/jupyter-0.1.2.zip",
+          "sha256": "c8e3c066242ec6ff94dd957f120ca86151c7281e51559d790d35a4abf53c0f97",
+          "dependencies": {},
+          "permissions": [
+            "pc"
+          ],
+          "needs": [
+            "pc",
+            "python"
+          ],
+          "layr": "^0.1",
+          "backend": "app",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "l6GNHhMQovmTrD5Qo2Iu4S9amEKbOSNLOZNeS/DYIWvlhKcYJmPddPRizusPiAKamcCro7ZyAnG2GHoK1U4RCA=="
         }
       }
     },
@@ -786,8 +953,8 @@
           ]
         },
         "0.1.1": {
-          "url": "packages/knowledge-0.1.1.zip",
-          "sha256": "00028158a19a7488f5c7c41d1ad26e0a7a842f17d93ba8e568bade7821c4c102",
+          "url": "https://github.com/mrknrb/layr-knowledge/releases/download/v0.1.1/knowledge-0.1.1.zip",
+          "sha256": "1d0e5afa020e3160b83bb9874a157f2e63586f3dbcf0729671af895b29813291",
           "dependencies": {
             "browser": ">=0.1.0, <1.0.0",
             "claude": ">=0.3.0, <1.0.0",
@@ -797,7 +964,7 @@
           "needs": [],
           "layr": "^0.1",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-          "signature": "4avLJzJ42Hes9s1DvgfM+PUTAZyo5JJ02tiIzzWJAQ6HvzRthkYiyowp2l/XRqJ31RD1RGrGAWMHqgmH2j8ECw==",
+          "signature": "hTU24slSdcFd28se9JndjkSqB7Z5+NO6cbH/VRmEvkl7aF45RDWXq3j76TN890MUG3hWXWMxSl28JHJy4nVwDQ==",
           "sessions": [
             {
               "id": "research",
@@ -832,6 +999,18 @@
           "layr": "^0.1",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
           "signature": "aUwsijgXQC60d/qaP809bkgpXW760SezO+ucRJH3qbwq1VkqDf+GggbMThdg6aOX5shN6bl7KX9BnAIx7e1ABQ=="
+        },
+        "0.1.2": {
+          "url": "https://github.com/mrknrb/layr-notes/releases/download/v0.1.2/notes-0.1.2.zip",
+          "sha256": "7d0e1227f364780f1c5e93c61b147289efe9706043d21bea014c2ac450850ab8",
+          "dependencies": {},
+          "permissions": [
+            "data"
+          ],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "TBTwcTqEJ2rb4lxXpPUmXUd5wEXEBQBs/y/eej6AAyCjb/wrxXaMHZIVqmRJgYp0Zy9LdMDZ9Oy/CP6g/j6uAg=="
         }
       }
     },
@@ -877,6 +1056,20 @@
           "layr": "^0.1",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
           "signature": "UdlqoBgxSWzNs42G3YCPY9t42fgh5OJPwdDK+cap+glirashjZFeAkwD3pQ9W/EgwS0KsD22pI+mzBW0n+GpDg=="
+        },
+        "0.1.1": {
+          "url": "https://github.com/mrknrb/layr-pdf/releases/download/v0.1.1/pdf-0.1.1.zip",
+          "sha256": "b54a471faf9edf7c89c2858bdc97d954fbecf02bb86dc7ab4c4e3e922aa82367",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "files",
+            "wasm"
+          ],
+          "needs": [],
+          "layr": "^0.1",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "+wP+Q/L6mve5wpP5kA7Hg1igtMLXQwCGXYqJjKrM426hRa2y/lEl/2+m2VbYGnqUXd9/WiuPcAjavUl+mO3SBA=="
         }
       }
     },
@@ -1361,6 +1554,98 @@
           "backend": "process",
           "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
           "signature": "1Jt+56KgWN8MeetLmEiHOTEx40T/FRGn9lAkRxrX/JqoF1o+DYpzYxiuK7kqXWNzYBXxnZpBn3iJ0UiphRtDAA==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See tasks, the board, branches and settings",
+              "defaults": {
+                "agents": "allow",
+                "plugin:concepts": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "thread",
+              "label": "Show a task in its Claude thread, and message, answer, stop and act on it there",
+              "defaults": {
+                "agents": "allow",
+                "plugin:claude": "allow"
+              }
+            },
+            {
+              "id": "work",
+              "label": "Propose, edit and run tasks",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "manage",
+              "label": "Land, discard, delete tasks; remove worktrees; change modes, settings, views",
+              "defaults": {
+                "agents": "allow"
+              }
+            },
+            {
+              "id": "pc",
+              "label": "Open windows on the PC (VS Code, File Explorer, ▶ Try)",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "claude",
+              "version": ">=0.3",
+              "groups": [
+                "read",
+                "conversations",
+                "ask",
+                "run",
+                "approve"
+              ],
+              "required": true,
+              "why": "Runs every task as a Claude thread: starts, reads, steers, answers and archives it, and writes briefs"
+            },
+            {
+              "plugin": "concepts",
+              "groups": [
+                "read",
+                "write"
+              ],
+              "required": false,
+              "why": "Links tasks to the concept map, moves their nodes' Status, and gives each task its project's map"
+            },
+            {
+              "plugin": "accounts",
+              "groups": [
+                "read",
+                "switch"
+              ],
+              "required": false,
+              "why": "Pacing: every account's room left and when another has room; switching to the right kind of account for a task whose model runs only there"
+            }
+          ]
+        },
+        "0.17.0": {
+          "url": "packages/pipeline-0.17.0.zip",
+          "sha256": "7c0f3f004403b3cf9ba9ee4cc260e3d92eb0f63e3bec3d7ac88ad78a2fbf440e",
+          "dependencies": {
+            "claude": ">=0.3"
+          },
+          "permissions": [
+            "data",
+            "pc",
+            "supabase"
+          ],
+          "needs": [
+            "pc",
+            "node",
+            "git"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "e1NGAPiVwMOFmaeEJCkVlToKeFDjA8mlqfJ5V/8XyjANmOC0IqbC9CIzskcr88tvzMucaS1ayFtlTc1jRJvDAQ==",
           "access": [
             {
               "id": "read",

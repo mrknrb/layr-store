@@ -1,11 +1,11 @@
 {
   "v": 1,
-  "version": "0.3.0",
-  "notes": "One folder for each plugin",
+  "version": "0.4.0",
+  "notes": "Browser: links open in new tabs like a real browser, private tabs, history, find, zoom per site, downloads",
   "windows": {
-    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.3.0/layr-windows-0.3.0.zip",
-    "sha256": "a21ab33d84310bb0efedfdf78532fda98442f1be18accf9af0c61fe9e9d14258",
+    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.4.0/layr-windows-0.4.0.zip",
+    "sha256": "b8f588c5cfe0e81c4c220207e6d9c137a26064a2236f3903aeee99ff3950e159",
     "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-    "signature": "XkzQe2srfd5z/5Xnd2t4SH/btZR24L4pfruA7Fzo8B6eFJJ4wl/VU6in+jLz8N1EUMfukPQuWT0aDfxO5BWtBQ=="
+    "signature": "lSk9P8FhvUjMCV2FMv7eFxZuluXXKZtkXF0z2AzS+XcJzOmfeHDgole7I+Gv5UneuZf2vMT/Qrsq9lZ5lOEaBw=="
   }
 }
