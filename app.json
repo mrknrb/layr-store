@@ -1,11 +1,11 @@
 {
   "v": 1,
-  "version": "0.5.1",
-  "notes": "Plugin page: Can't run only when a plugin really can't run",
+  "version": "0.6.0",
+  "notes": "Skills: plugins can bring instructions for AI agents, managed in Settings › Skills; Claude threads get them as skills",
   "windows": {
-    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.5.1/layr-windows-0.5.1.zip",
-    "sha256": "f9f1dfc169c188d0fcbcec0d218c1c992aca2ceb3af10880927c41c90f07a403",
+    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.6.0/layr-windows-0.6.0.zip",
+    "sha256": "d0ebcd815103b8417df39d122491edbe5cc94bf01de3a4a868eb272872ec1e6b",
     "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-    "signature": "862j73KqBJW6brjFbB3lS3zTaQ3GCr2fd+wYEIzdUUrb5+9JXgrf8cmAkkUlrZwXKNDt1NwiCAuLhv+GI9ebDg=="
+    "signature": "/p3hjV+J5Vv1g/tbYyOPwMigBHrd8kPk8kBLfEmun89AxTjeYSn1chRhNdg3uQAXiVq295NA6/9tNcgJYnBhAA=="
   }
 }
