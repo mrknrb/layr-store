@@ -1,11 +1,11 @@
 {
   "v": 1,
-  "version": "0.6.0",
-  "notes": "Skills: plugins can bring instructions for AI agents, managed in Settings › Skills; Claude threads get them as skills",
+  "version": "0.7.0",
+  "notes": "Reused tabs: Keep this tab, choose which tab gets reused, and a list in Settings › Panels. Claude: Task page button in a pipeline thread; a thread may run commands in its own plugin copy.",
   "windows": {
-    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.6.0/layr-windows-0.6.0.zip",
-    "sha256": "d0ebcd815103b8417df39d122491edbe5cc94bf01de3a4a868eb272872ec1e6b",
+    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.7.0/layr-windows-0.7.0.zip",
+    "sha256": "0c0ae8c6772faf470f2d7696de78d5950a8e6b68ee5e6c3220904885c3df7b68",
     "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-    "signature": "/p3hjV+J5Vv1g/tbYyOPwMigBHrd8kPk8kBLfEmun89AxTjeYSn1chRhNdg3uQAXiVq295NA6/9tNcgJYnBhAA=="
+    "signature": "y1CXY7a4WTfiQDbLOlFO+Ej//FwgN28v+PWdCtP9PnwcL7StDGH+aFzwHUDZF4G+Dx/WF1kCWjD01QR0qrGUDg=="
   }
 }
