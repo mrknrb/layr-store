@@ -713,6 +713,98 @@
             }
           ]
         },
+        "0.14.0": {
+          "url": "packages/claude-0.14.0.zip",
+          "sha256": "e4d539a970baa698c4439a6f74d2210c40cbe9801023b321df89d919cfa99945",
+          "dependencies": {},
+          "permissions": [
+            "data",
+            "pc",
+            "agents",
+            "packages",
+            "events:global"
+          ],
+          "needs": [
+            "pc",
+            "node",
+            "claude-code"
+          ],
+          "layr": "^0.1",
+          "backend": "process",
+          "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
+          "signature": "X0z4R9WJ8EIpHELdWDQVHt3tAh3cN3/Zbts/lshk7INyFFmVJkNRfxIRKb+VO8Nvn6hUg3+ygEMz1unP2qDKDA==",
+          "access": [
+            {
+              "id": "read",
+              "label": "See projects, threads' status, models and usage",
+              "defaults": {
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "conversations",
+              "label": "Read what threads say",
+              "defaults": {
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "ask",
+              "label": "Ask Claude one-off questions (uses your plan)",
+              "defaults": {
+                "plugin:concepts": "allow",
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "run",
+              "label": "Start, steer and stop threads; change projects",
+              "defaults": {
+                "plugin:care": "allow",
+                "plugin:devtools": "allow",
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "approve",
+              "label": "Answer threads' permission requests and change their permissions",
+              "defaults": {
+                "plugin:pipeline": "allow"
+              }
+            },
+            {
+              "id": "build-times",
+              "label": "See how long the builds, tests and checks threads run take",
+              "defaults": {
+                "agents": "allow",
+                "plugins": "allow"
+              }
+            },
+            {
+              "id": "pc",
+              "label": "Open terminal windows running commands, and folders, on your PC",
+              "defaults": {}
+            }
+          ],
+          "connections": [
+            {
+              "plugin": "pipeline",
+              "groups": [
+                "thread"
+              ],
+              "required": false,
+              "why": "In a pipeline task's thread: the task's buttons, and your messages and answers go through the pipeline"
+            },
+            {
+              "plugin": "concepts",
+              "groups": [
+                "read"
+              ],
+              "required": false,
+              "why": "Shows the concept nodes a thread touched, and the prototype pages linked in its replies"
+            }
+          ]
+        },
         "0.5.0": {
           "url": "packages/claude-0.5.0.zip",
           "sha256": "b257b3d90e59efce28d500246b077ca972fb897a33ec1743b73ff8e1082d93d8",
