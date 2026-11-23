@@ -1,11 +1,11 @@
 {
   "v": 1,
-  "version": "0.7.0",
-  "notes": "Reused tabs: Keep this tab, choose which tab gets reused, and a list in Settings › Panels. Claude: Task page button in a pipeline thread; a thread may run commands in its own plugin copy.",
+  "version": "0.7.1",
+  "notes": "Threads (was Claude Code), Plugin care in the app, the built-in chat, local updates",
   "windows": {
-    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.7.0/layr-windows-0.7.0.zip",
-    "sha256": "0c0ae8c6772faf470f2d7696de78d5950a8e6b68ee5e6c3220904885c3df7b68",
+    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.7.1/layr-windows-0.7.1.zip",
+    "sha256": "1aeb1bfde706f0796783264184dda918cd309294bbce6a2d75199a13f506e98c",
     "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-    "signature": "y1CXY7a4WTfiQDbLOlFO+Ej//FwgN28v+PWdCtP9PnwcL7StDGH+aFzwHUDZF4G+Dx/WF1kCWjD01QR0qrGUDg=="
+    "signature": "GPXxNK2E/g7hdaXxfp7idbZKDSliEctAAn48bWYLPeR4HjdNegDeV65ZADVzlekWY23htp+/KFjKVjetRmQuAw=="
   }
 }
