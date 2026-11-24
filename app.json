@@ -1,11 +1,11 @@
 {
   "v": 1,
-  "version": "0.7.1",
-  "notes": "Threads (was Claude Code), Plugin care in the app, the built-in chat, local updates",
+  "version": "0.7.2",
+  "notes": "Setup checklist: Claude Code install and sign-in; uv and Git Bash come with the app; Release joins a repository's history",
   "windows": {
-    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.7.1/layr-windows-0.7.1.zip",
-    "sha256": "1aeb1bfde706f0796783264184dda918cd309294bbce6a2d75199a13f506e98c",
+    "url": "https://github.com/mrknrb/layr-store/releases/download/app-v0.7.2/layr-windows-0.7.2.zip",
+    "sha256": "6ced4fa75751afc6bb6c0f9803ea009a5b7a6dc0b09f2905f7422b36d876ab16",
     "publicKey": "MabrHjIrjI/MhaDP9Lj6i5kbAulhfx+SXHZHS3pelZw=",
-    "signature": "GPXxNK2E/g7hdaXxfp7idbZKDSliEctAAn48bWYLPeR4HjdNegDeV65ZADVzlekWY23htp+/KFjKVjetRmQuAw=="
+    "signature": "9PZ37KHQLSUQwUi8CZ7oEWBjY3OBMASq0xZAyiy/0xGWaozPxYDD/JdQdHGnc16QA2Odx567UoZ8p4z1rDbrAQ=="
   }
 }
